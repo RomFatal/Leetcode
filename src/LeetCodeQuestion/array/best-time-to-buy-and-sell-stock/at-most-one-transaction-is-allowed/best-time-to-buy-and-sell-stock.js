@@ -1,4 +1,4 @@
-//At most one transaction is allowed Time Complexity: O(N) Auxiliary Space: O(1)
+//At most one transaction is allowed (solved using the greedy approach) Time Complexity: O(N) Auxiliary Space: O(1)
 export default function maxProfit(prices) {
     let buy = prices[0], max_profit = 0;
     let n = prices.length;
