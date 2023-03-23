@@ -1,5 +1,5 @@
 //LinearTime Time Complexity:O(n) Space Complexity: O(1)
-export function removeDuplicatesSortedArray(nums) {
+export default function removeDuplicatesSortedArray(nums) {
   let i = 0;
   for (let j = 1; j < nums.length;) {
     if (nums[i] != nums[j]) {
