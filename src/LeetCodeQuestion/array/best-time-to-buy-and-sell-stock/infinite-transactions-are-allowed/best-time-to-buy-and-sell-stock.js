@@ -1,4 +1,4 @@
-//At most one transaction is allowed Time Complexity: O(N) Auxiliary Space: O(1)
+//Infinite transactions are allowed Time Complexity: O(N) Auxiliary Space: O(1)
 // Function to find the maximum profit possible by buying
 // and selling stocks any number of times
 export default function maxProfit(prices)
