@@ -1,5 +1,5 @@
 //Brute Force Time Complexity:O(n³) Space Complexity: O(1)
-var removeDuplicates1 = function (nums) {
+export function bruteForce(nums) {
   for (let i = 0; i < nums.length; i++)
     for (let j = i + 1; j < nums.length;) {
       if (nums[i] == nums[j]) {
@@ -12,30 +12,22 @@ var removeDuplicates1 = function (nums) {
         j++;
       }
     }
-    return nums.map((x)=>x);
+  return nums;
 };
 
-var removeDuplicates2 = function (nums) {
+//LinearTime Time Complexity:O(n) Space Complexity: O(1)
+export function linearTime(nums) {
   let i = 0;
-  for (let j = 0; j < nums.length; j++) {
+  for (let j = 1; j < nums.length;) {
     if (nums[i] != nums[j]) {
       i++;
       nums[i] = nums[j]
+      j++
     }
+    else
+      nums.splice(j, 1)
   }
 };
-
-const nums = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
-//removeDuplicates1(nums)
-
-removeDuplicates2(nums)
-
-console.log(nums)
-
-
-
-export default removeDuplicates1;
-
 
 
 
