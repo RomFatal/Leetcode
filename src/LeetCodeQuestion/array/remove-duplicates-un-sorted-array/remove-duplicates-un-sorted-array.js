@@ -2,15 +2,10 @@
 export default function removeDuplicatesUnSortedArray(nums) {
   for (let i = 0; i < nums.length; i++)
     for (let j = i + 1; j < nums.length;) {
-      if (nums[i] == nums[j]) {
-        for (let k = j; k < nums.length - 1; k++) {
-          nums[k] = nums[k + 1];
-        }
-        nums.pop();
-      }
-      else {
+      if (nums[i] == nums[j])
+        nums.splice(j,1)
+      else 
         j++;
-      }
     }
   return nums;
 };

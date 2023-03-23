@@ -20,3 +20,29 @@ export default function maxProfit(prices)
     totalProfit += (prices[sellingDate] - prices[buyingDate]);
     return totalProfit;
 }
+
+/**
+ * @param {number[]} nums
+ * @return {number[]}
+ */
+var runningSum = function(nums) {
+    let runningSum = [];
+    runningSum[0] = nums[0];
+    let tmp;
+    for ( let i = 1; i < nums.length; i++){
+        tmp = runningSum[i-1] + nums[i];
+        runningSum.push(tmp);
+    }
+    return runningSum;
+};
+
+var runningSum = function(nums) {
+    let sumArr=[nums[0]];
+    let tmp;
+    for(let i=1 ; i < nums.length ; i++)
+    {
+        tmp = nums[i] + sumArr[i-1];
+        sumArr.push(tmp)
+    }
+    return sumArr;
+};
