@@ -1,5 +1,5 @@
 //Brute Force Time Complexity:O(n³) Space Complexity: O(1)
-export function bruteForce(nums) {
+export function removeDuplicatesUnSortedArray(nums) {
   for (let i = 0; i < nums.length; i++)
     for (let j = i + 1; j < nums.length;) {
       if (nums[i] == nums[j]) {
@@ -13,20 +13,6 @@ export function bruteForce(nums) {
       }
     }
   return nums;
-};
-
-//LinearTime Time Complexity:O(n) Space Complexity: O(1)
-export function linearTime(nums) {
-  let i = 0;
-  for (let j = 1; j < nums.length;) {
-    if (nums[i] != nums[j]) {
-      i++;
-      nums[i] = nums[j]
-      j++
-    }
-    else
-      nums.splice(j, 1)
-  }
 };
 
 

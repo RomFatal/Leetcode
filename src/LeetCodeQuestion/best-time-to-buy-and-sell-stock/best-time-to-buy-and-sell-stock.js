@@ -1,5 +1,5 @@
 //At most one transaction is allowed Time Complexity: O(N) Auxiliary Space: O(1)
-function maxProfit1( prices)
+export function maxProfit( prices)
 {
     let buy = prices[0], max_profit = 0;
     let n = prices.length;
@@ -16,4 +16,3 @@ function maxProfit1( prices)
     return max_profit;
 }
  
-export default maxProfit1;
