@@ -11,7 +11,6 @@ export default function findPivotIndex (nums) {
   left = totalSum;
   for(let i=0; i < nums.length; i++)
   { 
-      console.log(right ,left - nums[i])
       if( right != left - nums[i] )
       {
           right += nums[i];
