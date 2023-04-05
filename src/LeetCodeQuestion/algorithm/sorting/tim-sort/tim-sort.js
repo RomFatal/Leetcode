@@ -64,7 +64,7 @@ export default function timSort(arr) {
 
   for (let size = RUN; size < n; size = 2 * size) {
     for (let left = 0; left < n; left += 2 * size) {
-      const mid = left + size - 1;
+      const mid = Math.min(left + size - 1, n - 1);
       const right = Math.min(left + 2 * size - 1, n - 1);
       merge(arr, left, mid, right);
     }
